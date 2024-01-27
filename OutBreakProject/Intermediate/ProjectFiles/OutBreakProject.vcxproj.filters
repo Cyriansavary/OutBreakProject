@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\OutBreakProject.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\OutBreakProject.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\OutBreakProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\OutBreakProject">
+      <UniqueIdentifier>{CF0B8B0E-6614-3678-BF3C-BAC6287EA008}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\OutBreakProject\OutbreakCharacter.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\OutbreakCharacter.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\OutBreakProject\OutBreakProject.Build.cs">
+      <Filter>Source\OutBreakProject</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\OutBreakProject\OutBreakProject.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\OutBreakProject.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\OutBreakProject\OutBreakProjectCharacter.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\OutBreakProjectCharacter.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\OutBreakProject\OutBreakProjectGameMode.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\OutBreakProjectGameMode.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

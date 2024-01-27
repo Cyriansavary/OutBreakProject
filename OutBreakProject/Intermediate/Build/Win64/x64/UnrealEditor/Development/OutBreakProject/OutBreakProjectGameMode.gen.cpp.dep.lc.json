@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\unrealeditor\\inc\\outbreakproject\\uht\\outbreakprojectgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\x64\\outbreakprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\outbreakproject\\definitions.outbreakproject.h",
+            "c:\\dev\\outbreakproject\\outbreakproject\\source\\outbreakproject\\outbreakprojectgamemode.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\unrealeditor\\inc\\outbreakproject\\uht\\outbreakprojectgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,29 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/dev/OutBreakProject/OutBreakProject/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Map/MainLevel.umap",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Arms.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Arms_PhysicsAsset.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Arms_Skeleton.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/M_Man_Body.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/T_Man_Body_Albedo.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/T_Man_Body_Normals.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/AimFire.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/AimPose.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/AimtoIdle.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/Idle.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/IdleFIre.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/IdleToAim.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/Reload.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/run.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Blueprint/BP_Character.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/BS_WalkIdle.uasset"
+			]
+		}
+	]
+}

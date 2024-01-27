@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "OutBreakProject",
+			"Path": "..\\Source\\OutBreakProject.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "OutBreakProjectEditor",
+			"Path": "..\\Source\\OutBreakProjectEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
