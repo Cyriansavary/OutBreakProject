@@ -24,8 +24,21 @@ private:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UFloatingPawnMovement* PawnMovement;
 
-	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class USkeletalMeshComponent* StaticMesh;
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class USkeletalMeshComponent* WeaponMesh;
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	bool bIsAiming;
+	
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class UAnimMontage* FireMontageIdle;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class UAnimMontage* FireMontageAiming;
+
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Assets")
@@ -36,6 +49,15 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void Death();
+
+	UFUNCTION(BlueprintCallable)
+	void Turn(float Value);
+
+	UFUNCTION(BlueprintCallable)
+	void lookUp(float Value);
+
+
+
 	// Sets default values for this character's properties
 	AOutbreakCharacter();
 
@@ -52,11 +74,23 @@ protected:
 	UFUNCTION()
 	void MoveDown();
 
+	UFUNCTION()
+	void IsAiming();
+
+	UFUNCTION()
+	void IsNotAiming();
+
+	UFUNCTION()
+	void Shoot();
+
+
 	UPROPERTY()
 	FTimerHandle RestartTimerHandle;
 
 	UPROPERTY()
 	bool bIsDead;
+
+
 
 public:
 	UFUNCTION()

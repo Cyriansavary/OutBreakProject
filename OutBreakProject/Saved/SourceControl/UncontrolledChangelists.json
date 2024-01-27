@@ -22,7 +22,15 @@
 				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/Reload.uasset",
 				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/run.uasset",
 				"C:/dev/OutBreakProject/OutBreakProject/Content/Blueprint/BP_Character.uasset",
-				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/BS_WalkIdle.uasset"
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/BS_WalkIdle.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/ABP_Arms.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Blueprint/BP_GameMode.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/MilitaryWeapSilver/Showcase.umap",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/NewBlueprint.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Blueprint/BP_Charater.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Blueprint/NewBlueprint.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/AimFire_Montage.uasset",
+				"C:/dev/OutBreakProject/OutBreakProject/Content/Characters/Animation/IdleFIre_Montage.uasset"
 			]
 		}
 	]

@@ -39,6 +39,12 @@
     <ClInclude Include="..\..\Source\OutBreakProject\OutbreakCharacter.h">
       <Filter>Source\OutBreakProject</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\OutBreakProject\OutBreakGameMode.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\OutBreakGameMode.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
     <None Include="..\..\Source\OutBreakProject\OutBreakProject.Build.cs">
       <Filter>Source\OutBreakProject</Filter>
     </None>

@@ -6,6 +6,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "Engine/EngineTypes.h"
 #include "Kismet/GameplayStatics.h"
 
 
@@ -14,10 +16,6 @@ AOutbreakCharacter::AOutbreakCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	bUseControllerRotationPitch = false;
-	bUseControllerRotationYaw = false;
-
 
 	PawnMovement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("PawnMovement"));
 
@@ -28,11 +26,22 @@ AOutbreakCharacter::AOutbreakCharacter()
 	CameraArm->SetupAttachment(GetRootComponent());
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	Camera->bUsePawnControlRotation = false;
+	Camera->bUsePawnControlRotation = true;
 	Camera->SetupAttachment(CameraArm, USpringArmComponent::SocketName);
 
 	StaticMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("StaticMesh"));
 	StaticMesh->SetupAttachment(Camera);
+
+	WeaponMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WeaponMesh"));
+	WeaponMesh->SetupAttachment(StaticMesh, "PistolSocket");
+
+	bIsAiming = false;
+	bIsDead = false;
+
+	FireMontageIdle = CreateDefaultSubobject<UAnimMontage>(TEXT("FireMontageIdle"));
+	FireMontageAiming = CreateDefaultSubobject<UAnimMontage>(TEXT("FireMontageAiming"));
+
+	
 
 }
 
@@ -40,6 +49,7 @@ AOutbreakCharacter::AOutbreakCharacter()
 void AOutbreakCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
 	
 }
 
@@ -87,11 +97,48 @@ void AOutbreakCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &AOutbreakCharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Released, this, &AOutbreakCharacter::StopJumping);
 
+	PlayerInputComponent->BindAction(TEXT("Aim"), IE_Pressed, this, &AOutbreakCharacter::IsAiming);
+	PlayerInputComponent->BindAction(TEXT("Aim"), IE_Released, this, &AOutbreakCharacter::IsNotAiming);
+
+	PlayerInputComponent->BindAction(TEXT("Shoot"), IE_Pressed, this, &AOutbreakCharacter::Shoot);
+
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AOutbreakCharacter::MoveRight);
 	PlayerInputComponent->BindAction(TEXT("MoveDown"), IE_Pressed, this, &AOutbreakCharacter::MoveDown);
+
+	PlayerInputComponent->BindAxis("Turn", this, &AOutbreakCharacter::Turn);
+	PlayerInputComponent->BindAxis("LookUp", this, &AOutbreakCharacter::lookUp);
 
 }
 
 void AOutbreakCharacter::Death()
 {
 }
+
+void AOutbreakCharacter::Turn(float Value)
+{
+		AddControllerYawInput(Value);
+}
+
+void AOutbreakCharacter::lookUp(float Value)
+{
+		AddControllerPitchInput(Value + GetWorld()->GetDeltaSeconds());
+}
+
+void AOutbreakCharacter::IsAiming()
+{
+	bIsAiming = true;
+	GetCharacterMovement()->MaxWalkSpeed = 200.f;
+}
+
+void AOutbreakCharacter::IsNotAiming()
+{
+	bIsAiming = false;
+	GetCharacterMovement()->MaxWalkSpeed = 600.f;
+}
+
+void AOutbreakCharacter::Shoot()
+{
+	
+}
+
+

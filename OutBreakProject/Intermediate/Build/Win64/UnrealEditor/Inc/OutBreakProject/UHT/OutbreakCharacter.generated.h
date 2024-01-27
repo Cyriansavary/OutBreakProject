@@ -20,9 +20,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execAddCoin); \
+	DECLARE_FUNCTION(execShoot); \
+	DECLARE_FUNCTION(execIsNotAiming); \
+	DECLARE_FUNCTION(execIsAiming); \
 	DECLARE_FUNCTION(execMoveDown); \
 	DECLARE_FUNCTION(execMoveRight); \
 	DECLARE_FUNCTION(execOnDeath); \
+	DECLARE_FUNCTION(execlookUp); \
+	DECLARE_FUNCTION(execTurn); \
 	DECLARE_FUNCTION(execDeath);
 
 

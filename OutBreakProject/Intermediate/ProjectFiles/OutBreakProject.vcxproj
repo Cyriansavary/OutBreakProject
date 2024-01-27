@@ -121,6 +121,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\OutBreakProject\OutbreakCharacter.h"/>
+    <ClCompile Include="..\..\Source\OutBreakProject\OutBreakGameMode.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\OutBreakGameMode.h"/>
     <None Include="..\..\Source\OutBreakProject\OutBreakProject.Build.cs"/>
     <ClCompile Include="..\..\Source\OutBreakProject\OutBreakProject.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
