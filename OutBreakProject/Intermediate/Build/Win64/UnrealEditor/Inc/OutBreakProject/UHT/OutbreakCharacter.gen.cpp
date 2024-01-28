@@ -11,7 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UAnimationAsset_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UFloatingPawnMovement_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
@@ -407,13 +407,9 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 		static void NewProp_bIsAiming_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsAiming;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireMontageIdle_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FirePistol_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_FireMontageIdle;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireMontageAiming_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_FireMontageAiming;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_FirePistol;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DeathParticle_MetaData[];
 #endif
@@ -518,21 +514,13 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_bIsAiming = { "bIsAiming", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AOutbreakCharacter), &Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_bIsAiming_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_bIsAiming_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_bIsAiming_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageIdle_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
 		{ "ModuleRelativePath", "OutbreakCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageIdle = { "FireMontageIdle", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, FireMontageIdle), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageIdle_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageIdle_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageAiming_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Components" },
-		{ "ModuleRelativePath", "OutbreakCharacter.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageAiming = { "FireMontageAiming", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, FireMontageAiming), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageAiming_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageAiming_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol = { "FirePistol", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, FirePistol), Z_Construct_UClass_UAnimationAsset_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathParticle_MetaData[] = {
 		{ "Category", "Assets" },
@@ -570,8 +558,7 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_StaticMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_WeaponMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_bIsAiming,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageIdle,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireMontageAiming,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathParticle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathSound,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_RestartTimerHandle,
@@ -615,9 +602,9 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOutbreakCharacter, AOutbreakCharacter::StaticClass, TEXT("AOutbreakCharacter"), &Z_Registration_Info_UClass_AOutbreakCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOutbreakCharacter), 784736706U) },
+		{ Z_Construct_UClass_AOutbreakCharacter, AOutbreakCharacter::StaticClass, TEXT("AOutbreakCharacter"), &Z_Registration_Info_UClass_AOutbreakCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOutbreakCharacter), 786304479U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_1477807378(TEXT("/Script/OutBreakProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_17456026(TEXT("/Script/OutBreakProject"),
 		Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

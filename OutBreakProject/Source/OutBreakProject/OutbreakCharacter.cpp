@@ -38,10 +38,7 @@ AOutbreakCharacter::AOutbreakCharacter()
 	bIsAiming = false;
 	bIsDead = false;
 
-	FireMontageIdle = CreateDefaultSubobject<UAnimMontage>(TEXT("FireMontageIdle"));
-	FireMontageAiming = CreateDefaultSubobject<UAnimMontage>(TEXT("FireMontageAiming"));
-
-	
+	FirePistol = CreateDefaultSubobject<UAnimationAsset>(TEXT("FirePistol"));
 
 }
 
@@ -138,6 +135,10 @@ void AOutbreakCharacter::IsNotAiming()
 
 void AOutbreakCharacter::Shoot()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Shoot"));
+	WeaponMesh->PlayAnimation(FirePistol,false);
+
+	Linetracebyc
 	
 }
 

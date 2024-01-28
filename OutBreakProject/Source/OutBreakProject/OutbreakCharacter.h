@@ -34,10 +34,8 @@ private:
 	bool bIsAiming;
 	
 	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	class UAnimMontage* FireMontageIdle;
+	class UAnimationAsset* FirePistol;
 
-	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	class UAnimMontage* FireMontageAiming;
 
 
 public:

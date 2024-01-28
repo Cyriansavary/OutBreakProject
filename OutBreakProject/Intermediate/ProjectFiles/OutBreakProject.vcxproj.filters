@@ -66,5 +66,11 @@
     <ClInclude Include="..\..\Source\OutBreakProject\OutBreakProjectGameMode.h">
       <Filter>Source\OutBreakProject</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\OutBreakProject\Zombie.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\Zombie.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
