@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Blueprint/UserWidget.h"
 #include "OutbreakCharacter.generated.h"
+
 
 UCLASS()
 class OUTBREAKPROJECT_API AOutbreakCharacter : public ACharacter
@@ -36,9 +38,23 @@ private:
 	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UAnimationAsset* FirePistol;
 
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class UAnimationAsset* FireRifle;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class UAnimationAsset* FireShotgun;
+
+
 
 
 public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Assets")
+	class UParticleSystem* HitPistol;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Assets")
+	class UParticleSystem* HitZombie;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Assets")
 	class UParticleSystem* DeathParticle;
 
@@ -53,6 +69,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void lookUp(float Value);
+
+	UPROPERTY(EditAnywhere, Category = "Collision")
+	TEnumAsByte<ECollisionChannel> TraceChannelProperty = ECC_Pawn;
 
 
 

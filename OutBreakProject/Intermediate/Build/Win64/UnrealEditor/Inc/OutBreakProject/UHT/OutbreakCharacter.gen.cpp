@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	ENGINE_API UEnum* Z_Construct_UEnum_Engine_ECollisionChannel();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 	OUTBREAKPROJECT_API UClass* Z_Construct_UClass_AOutbreakCharacter();
 	OUTBREAKPROJECT_API UClass* Z_Construct_UClass_AOutbreakCharacter_NoRegister();
@@ -411,6 +412,22 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_FirePistol;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireRifle_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_FireRifle;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireShotgun_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_FireShotgun;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HitPistol_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_HitPistol;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HitZombie_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_HitZombie;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DeathParticle_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_DeathParticle;
@@ -418,6 +435,10 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DeathSound_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_DeathSound;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_TraceChannelProperty_MetaData[];
+#endif
+		static const UECodeGen_Private::FBytePropertyParams NewProp_TraceChannelProperty;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_RestartTimerHandle_MetaData[];
 #endif
@@ -522,6 +543,36 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol = { "FirePistol", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, FirePistol), Z_Construct_UClass_UAnimationAsset_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireRifle_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Components" },
+		{ "ModuleRelativePath", "OutbreakCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireRifle = { "FireRifle", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, FireRifle), Z_Construct_UClass_UAnimationAsset_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireRifle_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireRifle_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireShotgun_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Components" },
+		{ "ModuleRelativePath", "OutbreakCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireShotgun = { "FireShotgun", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, FireShotgun), Z_Construct_UClass_UAnimationAsset_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireShotgun_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireShotgun_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitPistol_MetaData[] = {
+		{ "Category", "Assets" },
+		{ "ModuleRelativePath", "OutbreakCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitPistol = { "HitPistol", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, HitPistol), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitPistol_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitPistol_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitZombie_MetaData[] = {
+		{ "Category", "Assets" },
+		{ "ModuleRelativePath", "OutbreakCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitZombie = { "HitZombie", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, HitZombie), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitZombie_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitZombie_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathParticle_MetaData[] = {
 		{ "Category", "Assets" },
 		{ "ModuleRelativePath", "OutbreakCharacter.h" },
@@ -535,6 +586,13 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathSound = { "DeathSound", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, DeathSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathSound_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathSound_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_TraceChannelProperty_MetaData[] = {
+		{ "Category", "Collision" },
+		{ "ModuleRelativePath", "OutbreakCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_TraceChannelProperty = { "TraceChannelProperty", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOutbreakCharacter, TraceChannelProperty), Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_TraceChannelProperty_MetaData), Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_TraceChannelProperty_MetaData) }; // 1822723181
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_RestartTimerHandle_MetaData[] = {
 		{ "ModuleRelativePath", "OutbreakCharacter.h" },
@@ -559,8 +617,13 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_WeaponMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_bIsAiming,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FirePistol,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireRifle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_FireShotgun,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitPistol,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_HitZombie,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathParticle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_DeathSound,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_TraceChannelProperty,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_RestartTimerHandle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOutbreakCharacter_Statics::NewProp_bIsDead,
 	};
@@ -602,9 +665,9 @@ void EmptyLinkFunctionForGeneratedCodeOutbreakCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOutbreakCharacter, AOutbreakCharacter::StaticClass, TEXT("AOutbreakCharacter"), &Z_Registration_Info_UClass_AOutbreakCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOutbreakCharacter), 786304479U) },
+		{ Z_Construct_UClass_AOutbreakCharacter, AOutbreakCharacter::StaticClass, TEXT("AOutbreakCharacter"), &Z_Registration_Info_UClass_AOutbreakCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOutbreakCharacter), 425180934U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_17456026(TEXT("/Script/OutBreakProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_453147596(TEXT("/Script/OutBreakProject"),
 		Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_dev_OutBreakProject_OutBreakProject_Source_OutBreakProject_OutbreakCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

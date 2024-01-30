@@ -1,0 +1,6 @@
+2024/01/30-11:34:14.195 4ed4 Creating DB C:/dev/OutBreakProject/OutBreakProject/Saved/webcache_4430\IndexedDB\https_www.youtube-nocookie.com_0.indexeddb.leveldb since it was missing.
+2024/01/30-11:34:14.207 4ed4 Reusing MANIFEST C:/dev/OutBreakProject/OutBreakProject/Saved/webcache_4430\IndexedDB\https_www.youtube-nocookie.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/30-11:50:48.826 219c Level-0 table #5: started
+2024/01/30-11:50:48.836 219c Level-0 table #5: 1211 bytes OK
+2024/01/30-11:50:48.836 219c Delete type=0 #3
+2024/01/30-11:50:48.838 219c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

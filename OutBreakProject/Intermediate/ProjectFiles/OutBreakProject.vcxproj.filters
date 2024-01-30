@@ -33,6 +33,12 @@
     <Filter Include="Source\OutBreakProject">
       <UniqueIdentifier>{CF0B8B0E-6614-3678-BF3C-BAC6287EA008}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\OutBreakProject\FloorTile.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\FloorTile.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\OutBreakProject\OutbreakCharacter.cpp">
       <Filter>Source\OutBreakProject</Filter>
     </ClCompile>
@@ -64,6 +70,12 @@
       <Filter>Source\OutBreakProject</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\OutBreakProject\OutBreakProjectGameMode.h">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\OutBreakProject\Weapons.cpp">
+      <Filter>Source\OutBreakProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OutBreakProject\Weapons.h">
       <Filter>Source\OutBreakProject</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\OutBreakProject\Zombie.cpp">

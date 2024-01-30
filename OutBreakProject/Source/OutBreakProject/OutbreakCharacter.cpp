@@ -9,6 +9,11 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/EngineTypes.h"
 #include "Kismet/GameplayStatics.h"
+#include "Engine/World.h"
+#include "Engine/EngineTypes.h"
+#include "Blueprint/UserWidget.h"
+#include "Zombie.h"
+
 
 
 // Sets default values
@@ -39,7 +44,12 @@ AOutbreakCharacter::AOutbreakCharacter()
 	bIsDead = false;
 
 	FirePistol = CreateDefaultSubobject<UAnimationAsset>(TEXT("FirePistol"));
+	FireRifle = CreateDefaultSubobject<UAnimationAsset>(TEXT("FireRifle"));
+	FireShotgun = CreateDefaultSubobject<UAnimationAsset>(TEXT("FireShotgun"));
 
+	//HUD = CreateDefaultSubobject<UUserWidget>(TEXT("HUD"));
+
+	
 }
 
 // Called when the game starts or when spawned
@@ -47,7 +57,12 @@ void AOutbreakCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	
+	//if (IsValid(HUD))
+	//{
+	//	HUD = CreateWidget<UUserWidget>(GetWorld(), HUD->GetClass());
+	//	HUD->AddToViewport();
+
+	//}
 }
 
 void AOutbreakCharacter::OnDeath()
@@ -82,7 +97,7 @@ void AOutbreakCharacter::Tick(float DeltaTime)
 	ControlRotation.Pitch = 0.f;
 	ControlRotation.Roll = 0.f;
 
-	AddMovementInput(ControlRotation.Vector());
+	AddMovementInput(FVector::ForwardVector);
 
 }
 
@@ -113,12 +128,12 @@ void AOutbreakCharacter::Death()
 
 void AOutbreakCharacter::Turn(float Value)
 {
-		AddControllerYawInput(Value);
+	AddControllerYawInput(Value);
 }
 
 void AOutbreakCharacter::lookUp(float Value)
 {
-		AddControllerPitchInput(Value + GetWorld()->GetDeltaSeconds());
+	AddControllerPitchInput(Value + GetWorld()->GetDeltaSeconds());
 }
 
 void AOutbreakCharacter::IsAiming()
@@ -135,10 +150,42 @@ void AOutbreakCharacter::IsNotAiming()
 
 void AOutbreakCharacter::Shoot()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Shoot"));
 	WeaponMesh->PlayAnimation(FirePistol,false);
 
-	Linetracebyc
+
+	const FName TraceTag("MyTraceTag");
+
+	GetWorld()->DebugDrawTraceTag = TraceTag;
+
+	FHitResult Hit;
+
+	FVector TraceStart = Camera->GetComponentLocation();
+	FVector TraceEnd = (Camera->GetForwardVector() * 10000) + Camera->GetComponentLocation();
+
+	FCollisionQueryParams QueryParams;
+	QueryParams.AddIgnoredActor(this);
+	QueryParams.bTraceComplex = true;
+	QueryParams.TraceTag = TraceTag;
+	TSubclassOf <UDamageType> DamageType;
+
+	GetWorld()->LineTraceSingleByChannel(Hit, TraceStart, TraceEnd, TraceChannelProperty, QueryParams);
+
+	if (Hit.bBlockingHit && IsValid(Hit.GetActor()))
+	{
+		if (Cast<AZombie>(Hit.GetActor()))
+		{
+			UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitZombie, Hit.ImpactPoint, Hit.ImpactNormal.Rotation());
+			UGameplayStatics::ApplyPointDamage(Hit.GetActor(), 20.0f, Hit.ImpactNormal, Hit, GetOwner()->GetInstigatorController(), this, DamageType);
+		}
+		else
+		{
+			UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitPistol, Hit.ImpactPoint, Hit.ImpactNormal.Rotation());
+		}
+		
+	}
+	else {
+		UE_LOG(LogTemp, Log, TEXT("No Actors were hit"));
+	}
 	
 }
 

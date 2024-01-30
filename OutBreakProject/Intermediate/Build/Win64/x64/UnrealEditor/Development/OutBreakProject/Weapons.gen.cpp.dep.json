@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\unrealeditor\\inc\\outbreakproject\\uht\\weapons.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\x64\\outbreakprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\outbreakproject\\definitions.outbreakproject.h",
+            "c:\\dev\\outbreakproject\\outbreakproject\\source\\outbreakproject\\weapons.h",
+            "c:\\dev\\outbreakproject\\outbreakproject\\intermediate\\build\\win64\\unrealeditor\\inc\\outbreakproject\\uht\\weapons.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
